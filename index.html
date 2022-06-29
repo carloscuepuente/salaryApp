@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario app</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col">
+                <div class="calendar-container">
+                    <div class="calendar" id="calendar">
+                        <!-- aqui es donde se va a mostrar el calendario -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+
+                <form id="resultados">
+                    <button id="calcular" type="submit" class="btn btn-success my-3">Calcular</button>
+                </form>
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="turnoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="forma" action="">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Horario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center mb-3">
+                                <h5>Turno 1</h5>
+                                <div class="row ">
+                                    <div class="form-group">
+                                        <label class="my-1" for="iniTur_1">Inicio turno 1</label>
+                                        <input type="time" class="form-control" id="iniTur_1" name="iniTur_1">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label class="my-1" for="finTur_1">Fin turno 1</label>
+                                        <input type="time" class="form-control" id="finTur_1" name="finTur_1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mb-3">
+                                <h5>Turno 2</h5>
+                                <div class="row ">
+                                    <div class="form-group">
+                                        <label class="my-1" for="iniTur_2">Inicio turno 2</label>
+                                        <input type="time" class="form-control" id="iniTur_2" name="iniTur_2">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label class="my-1" for="finTur_2">Fin turno 2</label>
+                                        <input type="time" class="form-control" id="finTur_2" name="finTur_2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="saveBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save
+                            changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <script src="./calendar.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
